@@ -38,3 +38,15 @@ class TraceSet:
         self.traces = []
         for obj in params:
             self.traces.append(Trace(obj))
+
+    def __len__(self):
+        '''
+        Returns the number of traces in the TraceSet
+        '''
+        return len(self.traces)
+
+    def __iter__(self):
+        '''
+        Returns an iterator of the traces contained by the TraceSet
+        '''
+        return iter(self.traces)
